@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
@@ -10,6 +13,9 @@ import { Blog } from "@/components/Blog";
 import { TestimonialsContact } from "@/components/TestimonialsContact";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { CommandPalette } from "@/components/CommandPalette";
+import { Preloader } from "@/components/Preloader";
+import { CustomCursor } from "@/components/CustomCursor";
 import { personalInfo, projects } from "@/lib/data";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -67,12 +73,23 @@ const structuredData = {
 };
 
 export default function Home() {
+  const [paletteOpen, setPaletteOpen] = useState(false);
+  const [bootFinished, setBootFinished] = useState(false);
+
+  useEffect(() => {
+    const handleToggle = () => setPaletteOpen((prev) => !prev);
+    window.addEventListener("toggle-command-palette", handleToggle);
+    return () => window.removeEventListener("toggle-command-palette", handleToggle);
+  }, []);
+
   return (
-    <main className="flex min-h-screen w-full flex-col">
+    <main id="main-content" className="flex min-h-screen w-full flex-col">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <Navbar />
+      <Preloader onComplete={() => setBootFinished(true)} />
+      <CustomCursor />
+      <Navbar onOpenPalette={() => setPaletteOpen(true)} />
       <ScrollProgress />
-      <Hero />
+      <Hero onOpenPalette={() => setPaletteOpen(true)} />
       <About />
       <Experience />
       <Stats />
@@ -82,6 +99,8 @@ export default function Home() {
       <Blog />
       <TestimonialsContact />
       <Footer />
+      <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
     </main>
   );
 }
+

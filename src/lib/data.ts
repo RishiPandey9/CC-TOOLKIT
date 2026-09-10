@@ -208,8 +208,9 @@ export const testimonials = [
 ];
 
 export const journeyStats = [
-  { label: "Projects Shipped", value: "10+", sublabel: "Trade Volume (Code)", chart: true },
-  { label: "Rarity System", value: "3 Tiers", tiers: ["Rare", "Epic", "Mythic"] },
-  { label: "Total Warriors", value: "500+", avatars: true },
-  { label: "Unique Clients", value: "5+", avatars: true },
+  { label: "Projects Shipped", value: "10+", sublabel: "Production Deployments", chart: true },
+  { label: "Core Pillars", value: "3 Areas", tiers: ["Full-Stack", "Applied AI", "System Architecture"] },
+  { label: "Tech Stack", value: "20+", sublabel: "Frameworks & Tools", badges: true },
+  { label: "Satisfied Clients", value: "5+", sublabel: "High Impact Delivery", avatars: true },
 ];
+
