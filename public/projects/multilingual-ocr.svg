@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
-  <rect width="1200" height="800" fill="#101312"/><path d="M0 160h1200M0 320h1200M0 480h1200M0 640h1200" stroke="#f3eee8" stroke-opacity=".07"/>
-  <text x="72" y="90" fill="#69a65b" font-family="monospace" font-size="20" letter-spacing="6">MULTILINGUAL OCR / DOCUMENT INTELLIGENCE</text>
-  <rect x="130" y="160" width="470" height="540" rx="12" fill="#f3eee8"/><text x="175" y="230" fill="#0d1710" font-family="serif" font-size="28">DOCUMENT_042</text><path d="M175 285h350M175 325h300M175 365h340M175 405h270M175 445h315" stroke="#0d1710" stroke-opacity=".38" stroke-width="12"/><rect x="160" y="255" width="410" height="230" fill="none" stroke="#d63d21" stroke-width="5" stroke-dasharray="12 10"/>
-  <path d="M650 260h390M650 335h320M650 410h420M650 485h280M650 560h350" stroke="#69a65b" stroke-width="15" stroke-linecap="round"/><text x="650" y="650" fill="#f3eee8" font-family="monospace" font-size="18">95% RECOGNITION ACCURACY</text><text x="650" y="685" fill="#9db49f" font-family="monospace" font-size="15">EN / HI / MULTI-LANGUAGE PIPELINE</text>
-</svg>
